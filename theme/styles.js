@@ -1,13 +1,13 @@
 const styles = { 
     global: {
         html: { 
-            bg: "sand.50",
+            // bg: "sand.50",
             color: "gray.900",
             padding: "0",
             margin: "0"
         },
         body: { 
-            bg: "sand.50",
+            // bg: "sand.50",
             color: "gray.900",
             padding: "0",
             margin: "0"

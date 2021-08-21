@@ -1,18 +1,23 @@
 import Amplify from "@aws-amplify/core";
 import config from "../src/aws-exports";
 import { ChakraProvider } from "@chakra-ui/react";
-import theme from "../theme"
+import theme from "../theme";
 
-import "@fontsource/noto-sans-jp"
-import "@fontsource/roboto"
+import { Provider } from "react-redux";
+import { store } from "../src/store";
+
+import "@fontsource/noto-sans-jp";
+import "@fontsource/roboto";
 
 Amplify.configure(config);
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider resetCSS theme={theme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <Provider store={store}>
+      <ChakraProvider resetCSS theme={theme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </Provider>
   );
 }
 
